@@ -50,31 +50,21 @@ export default class App extends React.Component {
 
             <div className="col">
               <div className="col text-center">
-                <h1>
-                  <Badge>Input</Badge>
-                </h1>
-                <div className="mark-input">
-                  <textarea className="input" 
+                <h1><Badge>Input</Badge></h1>
+                  <textarea 
                   style={inputStyle} 
                   value={this.state.markdown}
                   onChange={(e) => {
                     this.updateMarkdown(e.target.value)
-                  }}>
-                  {console.log(this.state.markdown)}  
+                  }}>  
                   </textarea>
-                </div>
               </div>
             </div>
 
             <div className="col">
               <div className="col text-center">
-                <h1>
-                  <Badge>Output</Badge>
-                </h1>
-                <div className="mark-output">
-                  <div style={outputStyle} dangerouslySetInnerHTML={{__html: marked(this.state.markdown)}}>
-                </div>
-                </div>
+                <h1><Badge>Output</Badge></h1>
+                  <div style={outputStyle} dangerouslySetInnerHTML={{__html: marked(this.state.markdown)}}></div>
               </div>
             </div>
 
