@@ -18,19 +18,22 @@ export default class App extends React.Component {
     
     let inputStyle = {
       width: "600px",
-      height: "50vh",
+      height: "auto",
+      minHeight: "50vh",
       marginLeft: "auto",
       marginRight: "auto",
-      padding:"10px"
+      padding:"10px",
+      border: "2px solid blue"
     }
 
     let outputStyle = {
-      width: "600px",
-      height: "50vh",
-      backgroundColor: 'grey',
+      width: "auto",
+      height: "auto",
+      minHeight: "50vh",
+      backgroundColor: '#87b5b5',
       marginLeft: "auto",
       marginRight: "auto",
-      padding:"10px"
+      padding:"10px",
     }
 
     return (
@@ -44,7 +47,8 @@ export default class App extends React.Component {
           </div>
 
           <div className="row mt-4">
-            <div className="col-md-6">
+
+            <div className="col">
               <div className="col text-center">
                 <h1>
                   <Badge>Input</Badge>
@@ -62,7 +66,7 @@ export default class App extends React.Component {
               </div>
             </div>
 
-            <div className="col-md-6">
+            <div className="col">
               <div className="col text-center">
                 <h1>
                   <Badge>Output</Badge>
